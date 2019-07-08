@@ -1,0 +1,14 @@
+<table id="users_list_table" class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th class="col-md-1" data-field="users_id">Id</th>
+      <th class="col-md-2" data-field="users_ad">Ad</th>
+      <th class="col-md-2" data-field="users_mail">Mail</th>
+      <th class="col-md-1" data-field="users_created_at">Kayıt Tarihi</th>
+      <th class="col-md-2"></th>
+    </tr>
+  </thead>
+  <tbody id="users_list_tbody">
+    <%= render partial: "users/users", collection: @users %>
+  </tbody>
+</table>

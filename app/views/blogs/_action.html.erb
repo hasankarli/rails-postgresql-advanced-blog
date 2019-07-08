@@ -1,0 +1,7 @@
+<div class="dropdown">
+  </button>
+      <%= link_to "Güncelle",edit_blog_path(blog)%>
+      <i class="fa fa-edit fa-fw"></i>
+      <%= link_to "Sil", blog_path(blog), method: :delete, remote: true, data: {confirm: "Are you sure?"} %>
+      <i class="fa fa-trash"></i>
+</div> 

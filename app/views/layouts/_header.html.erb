@@ -1,0 +1,52 @@
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img alt="Girişimci Okulu" width="111" height="54" data-sticky-width="82" data-sticky-height="40"
+                         src="/uploads/img/111x54.png">
+                </a>
+            </div>
+            <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="navbar-collapse nav-main-collapse collapse">
+            <div class="container">
+                <nav class="nav-main mega-menu">
+                    <ul class="nav nav-pills nav-main" id="mainMenu">
+                        <li>
+                            <a href="/">Blog</a>
+                        </li>
+                       <% if user_signed_in? %>
+                        <li class="dropdown active">
+						    <a class="dropdown-toggle" href="#">
+						    	Ayarlar
+						    	<i class="fa fa-angle-down"></i>
+						    </a>
+                            <ul class="dropdown-menu">
+                              <li><a href="/blogs/settings">Blog Ayarları</a></li>
+                              <li><a href="/categories/settings">Kategori Ayarları</a></li>
+                              <li><a href="/users/settings">Kullanıcı Ayarları</a></li>
+                            </ul>
+                        </li>
+                       <% end %> 
+                       <% unless user_signed_in?%> 
+                         <li>
+                            <%=  link_to "Kayıt Ol",  new_user_registration_path  %>
+                        </li>
+                        <li>
+                            <%=  link_to "GİRİŞ Yap",  user_session_path  %>
+                        </li>
+                       <% else %> 
+                        <li>
+                            <%= link_to "Çıkış Yap", destroy_user_session_path, method: :delete %>
+                        </li>
+                        <% end %>
+                        <li>
+                            <a href="https://www.instagram.com/girisimciokulu/" target="_blank" style="font-size: 1.5em;"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>

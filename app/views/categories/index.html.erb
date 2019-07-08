@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th class="col-md-2">Kategori Adı</th>
+      <th class="col-md-2">Ust Kategori</th>
+      <th class="col-md-2">Görüntüle</th>
+      <th class="col-md-2">Düzenle</th>
+      <th class="col-md-2">Sil</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td class="col-md-2"><%= category.ad %></td>
+        <td class="col-md-2"><%= category.ust_kategori %></td>
+        <td class="col-md-2"><%= link_to 'Show', category %></td>
+        <td class="col-md-2"><%= link_to 'Edit', edit_category_path(category) %></td>
+        <td class="col-md-2"><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Category', new_category_path %>

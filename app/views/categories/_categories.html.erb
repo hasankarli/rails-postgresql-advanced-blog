@@ -1,0 +1,14 @@
+<tr id="categories_<%= categories.id %>">
+  <td class="overflow-hidden">
+      <%= categories.id %>
+  </td>
+  <td class="overflow-hidden">
+      <%= categories.ad %>
+  </td>
+  <td class="overflow-hidden">
+      <%= categories.created_at %>
+  </td>
+  <td>
+    <%= render 'categories/action', category: categories %>
+  </td>
+</tr>

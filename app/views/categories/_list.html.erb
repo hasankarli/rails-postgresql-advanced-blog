@@ -1,0 +1,13 @@
+<table id="categories_list_table" class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th class="col-md-1" data-field="categories_id">Id</th>
+      <th class="col-md-3" data-field="categories_ad">Ad</th>
+      <th class="col-md-3" data-field="categories_created_at">Kayıt Tarihi</th>
+      <th class="col-md-2"></th>
+    </tr>
+  </thead>
+  <tbody id="categories_list_tbody">
+    <%= render partial: "categories/categories", collection: categories %>
+  </tbody>
+</table>

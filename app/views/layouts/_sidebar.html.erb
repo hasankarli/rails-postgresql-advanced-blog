@@ -1,0 +1,20 @@
+<div class="col-md-3">
+    <aside class="sidebar">
+        <hr />
+        <h4>Kategoriler</h4>
+        <ul class="nav nav-list primary push-bottom">
+            <% categories.each do |kategori| %>
+                <li><a href="/categories/<%= kategori.id %>"><%= kategori.ad %></a></li>
+            <% end %>
+        </ul>
+
+
+        <hr />
+
+        <h4>Biz Kimiz</h4>
+        <p>Girişimci Okulu, ürettiği özgün içerikler ile sizi en kısa sürede girişimcilik ekosistemine hazırlar.
+
+        </p>
+
+    </aside>
+</div>

@@ -1,0 +1,16 @@
+<table id="blogs_list_table" class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th class="col-md-1" data-field="blogs_id">Id</th>
+      <th class="col-md-2" data-field="blogs_baslik">Baslik</th>
+      <th class="col-md-2" data-field="blogs_etiketler">Etiketler</th>
+      <th class="col-md-1" data-field="blogs_yazar">Yazar Adı</th>
+      <th class="col-md-1" data-field="blogs_kategori">Kategori Id</th>
+      <th class="col-md-2" data-field="blogs_created_at">Kayıt Tarihi</th>
+      <th class="col-md-2"></th>
+    </tr>
+  </thead>
+  <tbody id="blogs_list_tbody">
+    <%= render partial: "blogs/blogs", collection: blogs %>
+  </tbody>
+</table>

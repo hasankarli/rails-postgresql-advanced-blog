@@ -1,0 +1,7 @@
+<div class="dropdown">
+  </button>
+      <%= link_to "Güncelle",edit_category_path(category)%>
+      <i class="fa fa-edit fa-fw"></i>
+      <%= link_to "Sil", category_path(category), method: :delete, remote: true, data: {confirm: "Are you sure?"} %>
+      <i class="fa fa-trash"></i>
+</div> 

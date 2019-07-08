@@ -1,0 +1,23 @@
+<tr id="blogs_<%= blogs.id %>">
+  <td class="overflow-hidden">
+      <%= blogs.id %>
+  </td>
+  <td class="overflow-hidden">
+      <%= blogs.baslik %>
+  </td>
+  <td class="overflow-hidden">
+      <%= blogs.etiketler %>
+  </td>
+   <td class="overflow-hidden">
+      <%= blogs.user.name %>
+  </td>
+  <td class="overflow-hidden">
+      <%= blogs.category_id %>
+  </td>
+  <td class="overflow-hidden">
+      <%= blogs.created_at %>
+  </td>
+  <td>
+    <%= render 'blogs/action', blog: blogs %>
+  </td>
+</tr>

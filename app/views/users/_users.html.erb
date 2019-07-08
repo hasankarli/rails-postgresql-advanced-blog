@@ -1,0 +1,17 @@
+<tr id="users_<%= users.id %>">
+  <td class="overflow-hidden">
+      <%= users.id %>
+  </td>
+  <td class="overflow-hidden">
+      <%= users.name %>
+  </td>
+  <td class="overflow-hidden">
+      <%= users.email %>
+  </td>   
+  <td class="overflow-hidden">
+      <%= users.created_at %>
+  </td>
+  <td>
+    <%= render 'users/action', user: users %>
+  </td>
+</tr>

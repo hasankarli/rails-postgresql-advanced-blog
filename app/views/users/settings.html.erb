@@ -1,0 +1,24 @@
+  <section class="page-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="breadcrumb">
+              <li ><a href="/">Girişimci Okulu</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Blog Ayarları</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+<div id="blogs_settings" class="panel">
+  <div class="panel-body">
+    <div id="search_actions"></div>
+    <div id="blogs_list" class="table-scrollable">
+      <%= render 'users/list', blogs: @blogs %>
+    </div>
+  </div>
+</div> 

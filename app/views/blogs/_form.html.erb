@@ -1,0 +1,66 @@
+  <section class="page-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="breadcrumb">
+              <li ><a href="/">Girişimci Okulu</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1><%= blog_name %></h1>
+        </div>
+      </div>
+    </div>
+  </section>
+<div class="right_col" role="main">
+  <div class="">
+    <div class="clearfix"></div>
+    <div class="">
+      <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom:30px">
+        <div class="x_panel">
+          <div class="x_content">
+            <%= simple_form_for @blog, html: { class: 'horizontal-form' } do |f| %>
+              <% if @blog.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+                  <ul>
+                  <% @blog.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+              <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                                      for="last-name">Resimler
+                                                </label>
+                <%= f.file_field :image, as: :file, input_html:{ class: "form-control"} %>
+              </div>
+              <div class="form-group col-md-12">
+                <%= f.input :baslik, input_html:{ class: "form-control"} %>
+              </div>
+              <div class="form-group col-md-12">
+                <%= f.input :icerik, as: :hidden %>
+                <trix-editor input="blog_icerik"></trix-editor>
+              </div>
+              <div class="form-group col-md-12">
+                <%= f.input :kisaicerik, input_html:{ class: "form-control"} %>
+              </div>
+              <div class="form-group col-md-4">
+                <%= f.input :etiketler, input_html:{ class: "form-control"} %>
+              </div>
+              <div class="form-group col-md-4">
+                <%= f.input :category_id, input_html:{ class: "form-control"} %>
+              </div>
+              <div class="form-group col-md-5 pull-right">
+                <%= f.submit class: 'btn btn-primary text-center '%>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

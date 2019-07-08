@@ -1,0 +1,27 @@
+  <section class="page-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="breadcrumb">
+              <li ><a href="/">Girişimci Okulu</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Kategori Ayarları</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+<div id="categories_settings" class="panel">
+  <div class="panel-body">
+    <div style="margin-bottom:10px">
+    <a href="/categories/new"><button type="button" class="btn btn-success">New Category
+    </button></a>
+    </div>
+    <div id="categories_list" class="table-scrollable">
+      <%= render 'categories/list', categories: @categories %>
+    </div>
+  </div>
+</div> 

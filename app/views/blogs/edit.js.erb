@@ -1,0 +1,15 @@
+<% slideContent = capture do %>
+  <%= render "blogs/form", blog: @blog %>  
+<% end %>
+$.slidePanel.show({
+  content: '<%= j render "shared/sliderpanel", title: "Edit blog", slidercontent: slideContent %>'
+}, {
+  closeSelector: '.slidePanel-close',
+  direction: 'right',
+  mouseDrag: false,
+  touchDrag: false,
+  pointerDrag: false
+});
+jQuery(document).ready(function() {
+  Site.initAjax();
+});

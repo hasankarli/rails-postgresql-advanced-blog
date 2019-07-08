@@ -1,0 +1,16 @@
+<h3><i class="fa f-comments"></i>Yorumlar</h3>
+<ul class="comments">
+  <% blog.comments.each do |comment| %>
+  <li id="yorumlar">
+    <div class="comment">
+      <div class="comment-block">
+          <div class="comment-arrow"></div>
+          <span class="comment-by">
+           <strong><%= comment.isim%></strong>
+          <p><%= comment.icerik %></p>
+          <span class="date pull-right"><% comment.created_at %></span>
+      </div>
+    </div>
+   </li>
+   <% end %>
+ </ul>
