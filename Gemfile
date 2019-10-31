@@ -7,7 +7,7 @@ end
 
 gem 'pg', '~> 0.19.0'
 gem 'simple_form', '~> 4.0'
-gem 'devise', '~> 4.5'
+gem 'devise', '~> 4.7'
 gem 'paperclip', '~> 5.3'
 gem 'ckeditor'
 gem 'shrine'
